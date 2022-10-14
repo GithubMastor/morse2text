@@ -1,8 +1,8 @@
 from colorama import Fore, Back, Style
 import pandas
 
-nato_dict = pandas.read_csv("morse.csv")
-phonetic_dict = {row.letter: row.code for (index, row) in nato_dict.iterrows()}
+morse_dict = pandas.read_csv("morse.csv")
+phonetic_dict = {row.letter: row.code for (index, row) in morse_dict.iterrows()}
 
 def text_to_morse():
     word = input(Fore.RESET + 'Input Your Message: ').upper()
